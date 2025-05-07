@@ -1,9 +1,10 @@
 import react from "react";
+import './style.css'
 
 const AnotherOneComponent = function() {
     return(
-        <div>
-            test2
+        <div className="header">
+            header
         </div>
     )
 }
