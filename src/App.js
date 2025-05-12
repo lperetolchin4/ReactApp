@@ -11,9 +11,13 @@ function App() {
   const someFunc = (value) => {
     alert(value)
   }
+
+  const someFunc1 = (value) => {
+    console.log(value)
+  }
   return (
     <>
-    <AnotherTestComponent />
+    <AnotherTestComponent title={'button'} color={'grey'}/>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -42,16 +46,18 @@ function App() {
 
         current time
         <TestComponent title={"button 1"} color={'red'} onclick={someFunc}/>
-        <TestComponent title={"button 2"} color={'pink'}/>
+        <TestComponent title={"button 2"} color={'pink'} onclick={someFunc1}/>
         <TestComponent title={"button 3"} color={'black'}/>
         <TestComponent title={"button 4"} color={'green'}/>
         
-        <ClassComponent />
+        <ClassComponent startValue={3} incValue={5}/>
 
       </div>
-      <div> no class </div>
-      <CurrentDate />
-      <CurrentTime />
+      <div style={{background:'black', fontSize:'50px', color:'red', border:'solid 10px green', borderRadius:'3px'}}> no class </div>
+      <CurrentDate color={'red'}/>
+      <CurrentDate color={'green'}/>
+
+      <CurrentTime color={''}/>
     </>
 
   );

@@ -1,10 +1,22 @@
 import react from "react";
 
 class ClassComponent extends react.Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            currentValue: props.startValue
+        }
+    }
 
     render() {
+        const clickHandler = () => {
+            this.setState({
+                currentValue: this.state.currentValue + this.props.incValue
+            })
+            console.log(this)
+        }
         return(
-            <div>ClassComponent</div>
+            <button onClick={clickHandler}>{this.state.currentValue}</button>
         )
     }
 }
