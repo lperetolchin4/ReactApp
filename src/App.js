@@ -6,6 +6,9 @@ import ClassComponent from './containers/classComponent';
 import CurrentDate from './containers/CurrentDate';
 import CurrentTime from './containers/CurrentTime';
 import react from 'react';
+import Writers from './containers/Writers';
+import Writer from './containers/Writers/components/writer';
+import Form from './containers/Form';
 
 function App() {
   const someFunc = (value) => {
@@ -43,8 +46,10 @@ function App() {
           </a>
         </header>
         test
+        <Form />
 
         current time
+        <Writers />
         <TestComponent title={"button 1"} color={'red'} onclick={someFunc}/>
         <TestComponent title={"button 2"} color={'pink'} onclick={someFunc1}/>
         <TestComponent title={"button 3"} color={'black'}/>
